@@ -4,10 +4,9 @@
     box-sizing: border-box;
     }
     body{
-        background-color: lavender; 
         background-image: linear-gradient(lavender, lightpink);
         color:darkslategray;
-        font-family: 'Hachi Maru Pop', cursive;
+        font-family: "Poppins", sans-serif;
         min-height: 100vh;
     }
     header{

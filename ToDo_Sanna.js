@@ -21,14 +21,14 @@ function addTask(event){
     taskDiv.appendChild(newTask);
 
     const completedButton = document.createElement("button");
-    completedButton.innerHTML = "<i class="fas fa-trash"></i>";
-    completedButton.classList.add("complete-button");
+    completedButton.innerHTML= '<i class="fas fa-check"></i>';
+    completedButton.classList.add("complete-btn");
     taskDiv.appendChild(completedButton);
 
-    const deletedButton = document.createElement("button");
-    deletedButton.innerHTML = "<i class="fas fa-trash"></i>";
-    deletedButton.classList.add("delete-button");
-    taskDiv.appendChild(deletedButton);
+    const trashButton = document.createElement("button");
+    trashButton.innerHTML= '<i class="fas fa-trash"></i>';
+    trashButton.classList.add("delete-button");
+    taskDiv.appendChild(trashButton);
 
     taskList.appendChild(taskDiv);
 
