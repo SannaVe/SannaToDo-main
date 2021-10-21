@@ -36,6 +36,7 @@ function addTask(event){
     trashButton.innerHTML= '<i class="fas fa-trash"></i>';
     trashButton.classList.add("delete-button");
     taskDiv.appendChild(trashButton);
+
 // add task to a tasklist
     taskList.appendChild(taskDiv);
 // clear input after adding
@@ -46,8 +47,10 @@ function deleteCheck(e){
 //delete task
     if(item.classList[0] === "delete-button") {
         const task = item.parentElement;
-        task.remove();
+        
+        task.remove(); 
     }
+    
 // mark as done
     if(item.classList[0] === "complete-btn") {
         const task = item.parentElement;
@@ -122,4 +125,16 @@ function getTasks(){
     // add task to a tasklist
         taskList.appendChild(taskDiv);
     });
+
+function removeLocalTasks(task){
+    let tasks;
+    if(localStorage.getItem('tasks') === null){
+    tasks = [];
+    }else{
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    }
+   const taskIndex = task.children[0].innerText;
+   tasks.splice(tasks,indexOf(taskIndex), 1);
+   localStorage.setItem("tasks", JSON.stringify(task));
+}
 }
