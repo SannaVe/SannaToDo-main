@@ -78,23 +78,23 @@ function filterTask(e){
                         }
                         break;
         }
-    })
+    });
 }
 //checking local storage
 function saveLocalTasks(task){
 let tasks;
-if(localStorage.getItem('tasks')===null){
+if(localStorage.getItem('tasks') === null){
     tasks = [];
 }else{
     tasks = JSON.parse(localStorage.getItem('tasks'));
 }
-task.push(task);
+tasks.push(task);
 localStorage.setItem("tasks",JSON.stringify(tasks));
 }
 
 function getTasks(){
     let tasks;
-    if(localStorage.getItem('tasks')===null){
+    if(localStorage.getItem('tasks') === null){
     tasks = [];
     }else{
     tasks = JSON.parse(localStorage.getItem('tasks'));
@@ -121,5 +121,5 @@ function getTasks(){
         taskDiv.appendChild(trashButton);
     // add task to a tasklist
         taskList.appendChild(taskDiv);
-    })
+    });
 }
