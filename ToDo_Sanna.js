@@ -21,7 +21,7 @@ function addTask(event){
     taskDiv.appendChild(newTask);
 
     const completedButton = document.createElement("button");
-    completedButton.innerHTML = "<i class="fas fa-check"></i>";
+    completedButton.innerHTML = "<i class="fas fa-trash"></i>";
     completedButton.classList.add("complete-button");
     taskDiv.appendChild(completedButton);
 
