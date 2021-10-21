@@ -1,0 +1,113 @@
+*{ 
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+        background-image: linear-gradient(lavender, lightpink);
+        color:darkslategray;
+        font-family: ”Hachi Maru Pop”, cursive;
+        min-height: 100vh;
+    }
+    header{
+        font-size: 1.5rem;
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    form {
+        min-height: 20vh;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        
+        
+    }
+    form input{
+        padding: 0,5rem;
+        font-size: 2rem;
+        border: none;
+        background: white;
+        font-family: ”Hachi Maru Pop”, cursive;
+
+    }
+    form button{
+        padding: 0,5rem;
+        font-size: 2rem;
+        border: none;
+        background: white;
+        color:rgb(252,223, 228);
+        background: white;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    form button:hover{
+        color:white;
+        background: rgb(252,223, 228);
+    }
+    .task-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .task-list {
+       min-width: 30%; 
+       list-style: none;
+    }
+    .task {
+        margin: 0.5rem;
+        background: white;
+        font-size: 1.5rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.5s ease;
+    }
+    .task li {
+        flex: 1;
+    }
+    .delete-button {
+        background: darkslategray;
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .complete-btn {
+        background: rgb(236, 150, 165);
+        color: white;
+        border: none;
+        padding: 1rem;
+        cursor: pointer;
+        font-size: 1rem;
+    }
+    .fa-trash, .fa-check{
+        pointer-events: none;
+    }
+    .completed{
+        text-decoration: line-through;
+        opacity: 0.5;
+    }
+    select{
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        outline: none;
+        border: none;
+
+    }
+    .select{
+        margin: 1rem;
+        position: relative;
+        overflow: hidden;
+    }
+    select{
+        color:darkslategray;
+        width: 10rem;
+        cursor: pointer;
+        font-family: ”Hachi Maru Pop”, cursive;
+    }
+
+
