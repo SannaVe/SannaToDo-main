@@ -26,11 +26,13 @@ function addTask(event){
 
 // add to a local storage
     saveLocalTasks(taskInput.value);
+
 // mark task as a done
     const completedButton = document.createElement('button');
     completedButton.innerHTML= '<i class="fas fa-check"></i>';
     completedButton.classList.add("complete-btn");
     taskDiv.appendChild(completedButton);
+
 // delete task
     const trashButton = document.createElement('button');
     trashButton.innerHTML= '<i class="fas fa-trash"></i>';
@@ -51,38 +53,13 @@ function deleteCheck(e){
         task.remove(); 
     }
     
-// mark as done
+// mark task as done
     if(item.classList[0] === "complete-btn") {
         const task = item.parentElement;
         task.classList.toggle("completed");
     }
 }
-// filters
 
-function filterTask(e){
-    const tasks = taskList.childNodes;
-    tasks.forEach(function(task){
-        switch(e.target.value){
-            case "all":
-                task.style.display = "flex";
-                break;
-                case "completed":
-                    if(task.classList.contains("completed")){
-                        task.style.display = "flex";
-                    }else{
-                        task.style.display = "none";
-                    }
-                    break;
-                    case "uncompleted":
-                        if(!task.classList.contains("completed")){
-                            task.style.display = "flex";
-                        }else{
-                            task.style.display = "none";
-                        }
-                        break;
-        }
-    });
-}
 //checking local storage
 function saveLocalTasks(task){
 let tasks;
