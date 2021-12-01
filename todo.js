@@ -17,6 +17,7 @@ function addTask(event){
 
     const taskDiv = document.createElement("div");
     taskDiv.classList.add("task");
+
 // new task creation
     const newTask = document.createElement('li');
     newTask.innerText = taskInput.value;
