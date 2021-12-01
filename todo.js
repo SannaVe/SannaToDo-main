@@ -13,8 +13,6 @@ filterOption.addEventListener("click", filterTask);
 //Functions
 function addTask(event){
     event.preventDefault();
-
-
     const taskDiv = document.createElement("div");
     taskDiv.classList.add("task");
 
@@ -129,7 +127,7 @@ function getTasks(){
         taskDiv.appendChild(trashButton);
     // add task to a tasklist
         taskList.appendChild(taskDiv);
-    });
+    })
 
 function removeLocalTasks(task){
     let tasks;
